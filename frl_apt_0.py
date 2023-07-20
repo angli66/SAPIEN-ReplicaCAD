@@ -57,19 +57,21 @@ def main():
     builder.add_collision_from_file(
         filename="replica_cad/objects/convex/frl_apartment_bike_01_cv_decomp.glb")
     bike_01 = builder.build(name='bike')
-    bike_01.set_pose(r2s(sapien.Pose(
-        p=np.array([
-            4.107420409715755,
-            0.4545634772665478,
-            -0.9759617637063622
-        ]),
-        q=np.array([
-            0.1531376838684082,
-            0.07608834654092789,
-            0.985193133354187,
-            0.012405824847519398
-        ])
-    )))
+    # bike_01.set_pose(r2s(sapien.Pose(
+    #     p=np.array([
+    #         4.107420409715755,
+    #         0.4545634772665478,
+    #         -0.9759617637063622
+    #     ]),
+    #     q=np.array([
+    #         0.1531376838684082,
+    #         0.07608834654092789,
+    #         0.985193133354187,
+    #         0.012405824847519398
+    #     ])
+    # )))
+    bike_01.set_pose(sapien.Pose([0.483688, -3.78923, 0.444299],
+                     [0.593394, 0.646121, 0.286293, 0.38529]))
 
     builder = scene.create_actor_builder()
     builder.add_visual_from_file(
@@ -1108,6 +1110,648 @@ def main():
             1.5354331480921246e-05,
             -0.3162568211555481,
             -3.497805209917715e-06
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_chair_04.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_chair_04_cv_decomp.glb")
+    chair_04 = builder.build(name='chair')
+    chair_04.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2401796989932157,
+            0.46910255187718897,
+            3.8506248502297877
+        ]),
+        q=np.array([
+            0.7070959806442261,
+            -6.070461040508235e-07,
+            -0.7071175575256348,
+            -2.59844313177382e-07
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_chair_04.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_chair_04_cv_decomp.glb")
+    chair_04 = builder.build(name='chair')
+    chair_04.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.26952179929032,
+            0.4704890177872069,
+            -2.0904483131779408
+        ]),
+        q=np.array([
+            0.6107712984085083,
+            -0.0016085348324850202,
+            -0.7918027639389038,
+            -0.0020697491709142923
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_mat.glb")
+    builder.add_nonconvex_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_mat.glb")
+    mat = builder.build_static(name='mat')
+    mat.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -1.550700879250923,
+            0.003622475121917826,
+            1.5342658990391274
+        ]),
+        q=np.array([
+            0.7071068286895752,
+            2.9802322387695312e-08,
+            -0.7071068286895752,
+            5.960464477539063e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_indoor_plant_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_indoor_plant_01_cv_decomp.glb")
+    indoor_plant_01 = builder.build(name='indoor_plant')
+    # indoor_plant_01.set_pose(r2s(sapien.Pose(
+    #     p=np.array([
+    #         3.4197291647131647,
+    #         1.692999413000504,
+    #         -4.133856821097971
+    #     ]),
+    #     q=np.array([
+    #         0.9999988079071045,
+    #         -5.1615941629279405e-05,
+    #         -0.00154321757145226,
+    #         2.0375915710246773e-07
+    #     ])
+    # )))
+    indoor_plant_01.set_pose(sapien.Pose(
+        [4.07263, -3.31444, 1.68303], [0.427417, 0.42741, -0.563305, -0.563314]))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_table_01.glb")
+    builder.add_nonconvex_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_table_01.glb")
+    table_01 = builder.build_static(name='table')
+    table_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.41439489989170397,
+            0.6632212233962491,
+            -0.17470338097700733
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_monitor.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_monitor_cv_decomp.glb")
+    monitor = builder.build_static(name='monitor')
+    monitor.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.4372712999399257,
+            1.543347558972872,
+            -0.5273685490286963
+        ]),
+        q=np.array([
+            -4.371138828673793e-08,
+            -1.7763568394002505e-15,
+            1.0,
+            -8.940696716308594e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_camera_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_camera_02_cv_decomp.glb")
+    camera_02 = builder.build(name='camera')
+    camera_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.4675843503131788,
+            1.764217499666931,
+            -0.5872958740340483
+        ]),
+        q=np.array([
+            0.7091919779777527,
+            -0.028345324099063873,
+            -0.7040526270866394,
+            0.023521307855844498
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_plate_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_plate_01_cv_decomp.glb")
+    plate_01 = builder.build(name='plate')
+    plate_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.0298574478178,
+            0.9644865502930506,
+            2.6329260477825285
+        ]),
+        q=np.array([
+            0.9703373908996582,
+            -8.416349373874255e-06,
+            0.24175472557544708,
+            8.566543669985549e-07
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_cup_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_cup_03_cv_decomp.glb")
+    cup_03 = builder.build(name='cup')
+    cup_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.0326713781909205,
+            0.9989798296190667,
+            2.6403462389054058
+        ]),
+        q=np.array([
+            0.6334787011146545,
+            0.06220954656600952,
+            -0.771053671836853,
+            -0.017633618786931038
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_cup_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_cup_01_cv_decomp.glb")
+    cup_01 = builder.build(name='cup')
+    cup_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2408843935257448,
+            0.983924483311843,
+            2.5616791893638684
+        ]),
+        q=np.array([
+            0.6068241596221924,
+            -2.8294665753492154e-05,
+            -0.7948361039161682,
+            -1.4519568139803596e-05
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_plate_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_plate_02_cv_decomp.glb")
+    plate_02 = builder.build(name='plate')
+    plate_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.080934439552948,
+            0.9903172720223665,
+            2.2550046161632054
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_bowl_06.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_bowl_06_cv_decomp.glb")
+    bowl_06 = builder.build(name='bowl')
+    bowl_06.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.0212689069012413,
+            0.9860159838062513,
+            1.962052314089754
+        ]),
+        q=np.array([
+            0.9999998807907104,
+            0.00048828122089616954,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_cup_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_cup_02_cv_decomp.glb")
+    cup_02 = builder.build(name='cup')
+    cup_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2144558426775047,
+            0.9960266370638448,
+            2.0379445562275342
+        ]),
+        q=np.array([
+            0.7473792433738708,
+            -1.2943657566211186e-05,
+            0.664397656917572,
+            1.2434369637048803e-05
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_sponge_dish.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_sponge_dish_cv_decomp.glb")
+    sponge_dish = builder.build(name='kitchen_utensil')
+    sponge_dish.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3765419384008477,
+            0.9901297256125796,
+            2.0387958012602496
+        ]),
+        q=np.array([
+            -0.08086394518613815,
+            1.2481838894018438e-05,
+            0.9967251420021057,
+            -9.348681487608701e-05
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_02_cv_decomp.glb")
+    kitchen_utensil_02 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.39422155468651,
+            1.0234393756836653,
+            1.9150788320466745
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_small_appliance_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_small_appliance_01_cv_decomp.glb")
+    small_appliance_01 = builder.build(name='small_appliance')
+    small_appliance_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.1577768278573473,
+            1.094117187301409,
+            1.1320104880828685
+        ]),
+        q=np.array([
+            0.7160552144050598,
+            -1.2546704056148883e-05,
+            -0.6980436444282532,
+            6.473955181718338e-06
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_04.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_04_cv_decomp.glb")
+    kitchen_utensil_04 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_04.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.393288374197755,
+            0.9958334886794491,
+            0.739746062509862
+        ]),
+        q=np.array([
+            0.7067710161209106,
+            0.00018358776287641376,
+            -0.7074423432350159,
+            0.0001732671371428296
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.444240719419895,
+            1.07352401047594,
+            0.8247272897509641
+        ]),
+        q=np.array([
+            0.9999996423721313,
+            0.0008457278599962592,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.444071442228733,
+            1.0735310359159485,
+            0.7699508810956104
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.444080978971897,
+            1.0735252001548916,
+            0.7153729571573297
+        ]),
+        q=np.array([
+            0.9999998211860657,
+            0.0005980199202895164,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.439621359449802,
+            1.0735386684249488,
+            0.6612882268538393
+        ]),
+        q=np.array([
+            0.9999999403953552,
+            0.00034526700619608164,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3755842748703344,
+            1.0455457070137173,
+            0.8185636176340143
+        ]),
+        q=np.array([
+            0.9999998211860657,
+            0.0005980199202895164,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3752742529920505,
+            1.0455411689549614,
+            0.7614319548317205
+        ]),
+        q=np.array([
+            0.999969482421875,
+            -7.394045678665861e-05,
+            -0.007803070824593306,
+            0.00037530294503085315
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3752459747597836,
+            1.0455294887106037,
+            0.7068356780545527
+        ]),
+        q=np.array([
+            0.999983549118042,
+            -0.0001030511484714225,
+            -0.005734181962907314,
+            -0.00010014435974881053
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_03_cv_decomp.glb")
+    kitchen_utensil_03 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3753357865870286,
+            1.0455514221442006,
+            0.6512400181799256
+        ]),
+        q=np.array([
+            0.9999990463256836,
+            -0.00012087525828974321,
+            -0.0013741395669057965,
+            6.691049202345312e-05
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_06.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_06_cv_decomp.glb")
+    kitchen_utensil_06 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_06.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.37639330363218,
+            1.0064355578506365,
+            0.5168919279967668
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_choppingboard_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_choppingboard_02.glb")
+    choppingboard_02 = builder.build(name='chopping_board')
+    choppingboard_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.462873620451536,
+            1.080273484338531,
+            0.31750580947430523
+        ]),
+        q=np.array([
+            0.5708795189857483,
+            0.41823890805244446,
+            0.5699824094772339,
+            -0.41748398542404175
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_picture_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_picture_03.glb")
+    picture_03 = builder.build(name='picture')
+    picture_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2339015470141543,
+            1.0536260587741557,
+            0.3960886158897984
+        ]),
+        q=np.array([
+            -0.09706857055425644,
+            -0.01689460314810276,
+            0.9803974032402039,
+            -0.1706264317035675
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_knifeblock.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_knifeblock.glb")
+    knifeblock = builder.build(name='knife_block')
+    knifeblock.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3510213018811834,
+            1.0769024740322775,
+            0.3315389076025292
+        ]),
+        q=np.array([
+            0.9999838471412659,
+            1.4381769233295927e-06,
+            0.005683788564056158,
+            7.434350095536502e-07
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_08.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_08_cv_decomp.glb")
+    kitchen_utensil_08 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_08.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            2.1922357271053294,
+            1.0207934350929246,
+            0.31032127808501464
+        ]),
+        q=np.array([
+            -0.22345943748950958,
+            -6.918581675563473e-06,
+            0.9747132062911987,
+            -6.492099146271357e-06
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_kitchen_utensil_09.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_09_cv_decomp.glb")
+    kitchen_utensil_09 = builder.build(name='kitchen_utensil')
+    kitchen_utensil_09.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2383486407085798,
+            1.0432830064032899,
+            0.20288169660460803
+        ]),
+        q=np.array([
+            0.9999967813491821,
+            -7.581105455756187e-05,
+            -0.0025360439904034138,
+            4.968914254277479e-06
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_small_appliance_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_small_appliance_02_cv_decomp.glb")
+    small_appliance_02 = builder.build(name='small_appliance')
+    small_appliance_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.1577768278573473,
+            1.094117187301409,
+            1.1320104880828685
+        ]),
+        q=np.array([
+            0.7160552144050598,
+            -1.2546704056148883e-05,
+            -0.6980436444282532,
+            6.473955181718338e-06
         ])
     )))
 

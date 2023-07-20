@@ -2276,6 +2276,98 @@ def main():
         ])
     )))
 
+    # Articulated objects
+    loader = scene.create_urdf_loader()
+    loader.fix_root_link = True
+    fridge = loader.load("replica_cad/urdf/fridge/fridge_dynamic.urdf")
+    fridge.set_root_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.1782121658325195,
+            0.9755649566650391,
+            3.2299728393554688
+        ]),
+        q=np.array([
+            1,
+            0,
+            0,
+            0
+        ])
+    )))
+
+    loader = scene.create_urdf_loader()
+    loader.fix_root_link = True
+    loader.scale = 0.98
+    kitchen_counter = loader.load(
+        "replica_cad/urdf/kitchen_counter/kitchen_counter.urdf")
+    kitchen_counter.set_root_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2,
+            0.04,
+            1.2346
+        ]),
+        q=np.array([
+            1,
+            0,
+            0,
+            0
+        ])
+    )))
+
+    loader = scene.create_urdf_loader()
+    loader.fix_root_link = True
+    loader.scale = 0.38
+    kitchen_cupboards = loader.load(
+        "replica_cad/urdf/kitchen_cupboards/kitchenCupboard_01.urdf")
+    kitchen_cupboards.set_root_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.3,
+            1.54,
+            1.2346
+        ]),
+        q=np.array([
+            -0.707,
+            0.707,
+            0,
+            0
+        ])
+    )))
+
+    loader = scene.create_urdf_loader()
+    loader.fix_root_link = True
+    loader.scale = 0.4
+    chest_of_drawers = loader.load(
+        "replica_cad/urdf/chest_of_drawers/chestOfDrawers_01_dynamic.urdf")
+    chest_of_drawers.set_root_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.318626880645752,
+            0,
+            -1.3263527154922485
+        ]),
+        q=np.array([
+            -0.707,
+            0.707,
+            0,
+            0
+        ])
+    )))
+
+    loader = scene.create_urdf_loader()
+    loader.fix_root_link = True
+    cabinet = loader.load("replica_cad/urdf/cabinet/cabinet_dynamic.urdf")
+    cabinet.set_root_pose(r2s(sapien.Pose(
+        p=np.array([
+            1.317476749420166,
+            0.05,
+            1.8777843713760376
+        ]),
+        q=np.array([
+            0.315322,
+            0,
+            0.948985,
+            0
+        ])
+    )))
+
     # Viewer
     viewer = Viewer(renderer, resolutions=(1920, 1080))
     viewer.set_scene(scene)

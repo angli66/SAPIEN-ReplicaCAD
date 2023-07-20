@@ -257,7 +257,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_sofa.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_sofa.glb")
+        filename="replica_cad/objects/convex/frl_apartment_sofa_cv_decomp.glb")
     sofa = builder.build_static(name='sofa')
     sofa.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -417,7 +417,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_table_03.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_table_03.glb")
+        filename="replica_cad/objects/convex/frl_apartment_table_03_cv_decomp.glb")
     table_03 = builder.build_static(name='table')
     table_03.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -457,7 +457,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_chair_01.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_chair_01.glb")
+        filename="replica_cad/objects/convex/frl_apartment_chair_01_cv_decomp.glb")
     chair_01 = builder.build_static(name='chair')
     chair_01.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -477,7 +477,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_chair_01.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_chair_01.glb")
+        filename="replica_cad/objects/convex/frl_apartment_chair_01_cv_decomp.glb")
     chair_01 = builder.build_static(name='chair')
     chair_01.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -637,7 +637,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_wall_cabinet_02.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_wall_cabinet_02.glb")
+        filename="replica_cad/objects/convex/frl_apartment_wall_cabinet_02_cv_decomp.glb")
     wall_cabinet_02 = builder.build_static(name='wall_cabinet')
     wall_cabinet_02.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -997,7 +997,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_table_02.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_table_02.glb")
+        filename="replica_cad/objects/convex/frl_apartment_table_02_cv_decomp.glb")
     table_02 = builder.build_static(name='table')
     table_02.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -1138,7 +1138,8 @@ def main():
         filename="replica_cad/objects/frl_apartment_chair_04.glb")
     builder.add_collision_from_file(
         filename="replica_cad/objects/convex/frl_apartment_chair_04_cv_decomp.glb")
-    chair_04 = builder.build(name='chair')
+    # chair_04 = builder.build(name='chair')
+    chair_04 = builder.build_static(name='chair')
     chair_04.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.26952179929032,
@@ -1199,7 +1200,7 @@ def main():
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_table_01.glb")
     builder.add_nonconvex_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_table_01.glb")
+        filename="replica_cad/objects/convex/frl_apartment_table_01_cv_decomp.glb")
     table_01 = builder.build_static(name='table')
     table_01.set_pose(r2s(sapien.Pose(
         p=np.array([
@@ -1703,7 +1704,7 @@ def main():
     kitchen_utensil_08 = builder.build(name='kitchen_utensil')
     kitchen_utensil_08.set_pose(r2s(sapien.Pose(
         p=np.array([
-            2.1922357271053294,
+            -2.1922357271053294,
             1.0207934350929246,
             0.31032127808501464
         ]),
@@ -1743,37 +1744,537 @@ def main():
     small_appliance_02 = builder.build(name='small_appliance')
     small_appliance_02.set_pose(r2s(sapien.Pose(
         p=np.array([
-            -2.1577768278573473,
-            1.094117187301409,
-            1.1320104880828685
+            -2.323086477026056,
+            1.0883071898357457,
+            0.000176499952074239
         ]),
         q=np.array([
-            0.7160552144050598,
-            -1.2546704056148883e-05,
-            -0.6980436444282532,
-            6.473955181718338e-06
+            0.7071254849433899,
+            -8.414540388912428e-06,
+            -0.7070881128311157,
+            -5.5371383496094495e-06
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_setupbox.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_setupbox_cv_decomp.glb")
+    setupbox = builder.build_static(name='tablet')
+    setupbox.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.4426179806521304,
+            1.0454591548309102,
+            -0.5731640165488877
+        ]),
+        q=np.array([
+            0.5566916465759277,
+            0.8307193517684937,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_picture_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_picture_02.glb")
+    picture_02 = builder.build(name='picture')
+    picture_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.422472662890697,
+            1.5306948527030095,
+            -1.5477773880428713
+        ]),
+        q=np.array([
+            0.6994363069534302,
+            0.09628245234489441,
+            -0.701562225818634,
+            0.0965871587395668
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_handbag.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_handbag_cv_decomp.glb")
+    handbag = builder.build(name='handbag')
+    handbag.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.323607023799576,
+            1.8719510016430925,
+            -2.079638359900044
+        ]),
+        q=np.array([
+            0.6507107019424438,
+            0.08490215986967087,
+            -0.7538508772850037,
+            0.03280230239033699
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_rack_01.glb")
+    builder.add_nonconvex_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_rack_01_cv_decomp.glb")
+    rack_01 = builder.build_static(name='rack')
+    rack_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.0790531625404522,
+            0.31483264369793473,
+            -2.5388489370048997
+        ]),
+        q=np.array([
+            0.9999990463256836,
+            -5.110719598633295e-07,
+            0.0013810491655021906,
+            -7.098410605976824e-06
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_umbrella.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_umbrella_cv_decomp.glb")
+    umbrella = builder.build(name='umbrella')
+    umbrella.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2892425340503277,
+            0.5602593977738366,
+            -2.7617138196780906
+        ]),
+        q=np.array([
+            -0.0806984230875969,
+            0.00957900658249855,
+            0.002710412722080946,
+            0.9966889023780823
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_shoe_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_shoe_01_cv_decomp.glb")
+    shoe_01 = builder.build(name='shoe')
+    shoe_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -1.8199461568230866,
+            0.3602124978289363,
+            -2.5655168133811905
+        ]),
+        q=np.array([
+            0.008195980452001095,
+            -0.0001868897525127977,
+            0.9999253749847412,
+            0.009062045253813267
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_shoe_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_shoe_02_cv_decomp.glb")
+    shoe_02 = builder.build(name='shoe')
+    shoe_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.093289691405659,
+            0.3602185008550056,
+            -2.5665119720285725
+        ]),
+        q=np.array([
+            -0.00042287903488613665,
+            -0.00020568784384522587,
+            0.9999608993530273,
+            0.008827954530715942
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_shoe_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_shoe_03_cv_decomp.glb")
+    shoe_03 = builder.build(name='shoe')
+    shoe_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.333083215536946,
+            0.357759296656825,
+            -2.5114650538477123
+        ]),
+        q=np.array([
+            0.03995947539806366,
+            -0.0018959534354507923,
+            0.9990471601486206,
+            0.017451461404561996
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_shoe_04.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_shoe_04_cv_decomp.glb")
+    shoe_04 = builder.build(name='shoe')
+    shoe_04.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -1.8625753647610575,
+            0.16332561435833237,
+            -2.559375085535354
+        ]),
+        q=np.array([
+            0.0128908921033144,
+            -0.002723709214478731,
+            0.9998583197593689,
+            -0.010479584336280823
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_cloth_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_cloth_02_cv_decomp.glb")
+    cloth_02 = builder.build_static(name='cloth')
+    cloth_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.206169113093824,
+            0.9419560058682306,
+            -2.332082291237297
+        ]),
+        q=np.array([
+            0.049986131489276886,
+            5.587935447692871e-09,
+            0.9987499713897705,
+            -5.960464477539063e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_picture_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_picture_01.glb")
+    picture_01 = builder.build_static(name='picture')
+    picture_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -0.3670506930272897,
+            1.3813003051753292,
+            -2.975669314398404
+        ]),
+        q=np.array([
+            0.7149065732955933,
+            8.940696716308594e-08,
+            0.6992200613021851,
+            -5.960464477539063e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_beanbag.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_beanbag_cv_decomp.glb")
+    beanbag = builder.build(name='beanbag')
+    beanbag.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            3.7999427476839047,
+            0.3372600305818876,
+            1.5678577269893819
+        ]),
+        q=np.array([
+            0.43730679154396057,
+            -0.001723677385598421,
+            0.8989261388778687,
+            0.02630022168159485
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_beanbag.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_beanbag_cv_decomp.glb")
+    beanbag = builder.build(name='beanbag')
+    beanbag.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            3.8958638610694893,
+            0.33725961521804765,
+            3.1576456328782148
+        ]),
+        q=np.array([
+            0.22654053568840027,
+            0.0041658030822873116,
+            0.9736451506614685,
+            0.026024524122476578
         ])
     )))
 
     # builder = scene.create_actor_builder()
     # builder.add_visual_from_file(
-    #     filename="replica_cad/objects/frl_apartment_handbag.glb")
+    #     filename="replica_cad/objects/frl_apartment_bike_02.glb")
     # builder.add_collision_from_file(
-    #     filename="replica_cad/objects/convex/frl_apartment_handbag_cv_decomp.glb")
-    # handbag = builder.build(name='handbag')
-    # handbag.set_pose(r2s(sapien.Pose(
+    #     filename="replica_cad/objects/convex/frl_apartment_bike_02_cv_decomp.glb")
+    # bike_02 = builder.build(name='bike')
+    # bike_02.set_pose(r2s(sapien.Pose(
     #     p=np.array([
-    #         -2.323607023799576,
-    #         1.8719510016430925,
-    #         -2.079638359900044
+    #         -0.551209939169045,
+    #         0.4536360645402108,
+    #         -1.0196206032539004
     #     ]),
     #     q=np.array([
-    #         0.6507107019424438,
-    #         0.08490215986967087,
-    #         -0.7538508772850037,
-    #         0.03280230239033699
+    #         -0.01878906413912773,
+    #         0.08465909212827682,
+    #         0.9962324500083923,
+    #         -0.0009783057030290365
     #     ])
     # )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_lamp_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_lamp_02_cv_decomp.glb")
+    lamp_02 = builder.build(name='lamp')
+    lamp_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.6497997234400827,
+            1.1433340348303318,
+            2.177875831235724
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_lamp_02.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_lamp_02_cv_decomp.glb")
+    lamp_02 = builder.build(name='lamp')
+    lamp_02.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            1.1436370800074656,
+            1.1433689631521702,
+            2.5776448990000063
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_cloth_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_cloth_01_cv_decomp.glb")
+    cloth_01 = builder.build_static(name='cloth')
+    cloth_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.2343876322829805,
+            1.0719663597103843,
+            -1.8839233074713455
+        ]),
+        q=np.array([
+            -4.371138828673793e-08,
+            -1.7763568394002505e-15,
+            1.0,
+            -8.940696716308594e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_cloth_03.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_cloth_03_cv_decomp.glb")
+    cloth_03 = builder.build_static(name='cloth')
+    cloth_03.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.245216549769531,
+            1.202465687575864,
+            -2.1152903009276547
+        ]),
+        q=np.array([
+            0.0425836481153965,
+            3.725290298461914e-09,
+            0.9990930557250977,
+            -8.940696716308594e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_shoebox_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_shoebox_01_cv_decomp.glb")
+    shoebox_01 = builder.build(name='box')
+    shoebox_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            -2.302423760735717,
+            1.3857124848291278,
+            -1.083843636032615
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_monitor_stand.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_monitor_stand_cv_decomp.glb")
+    monitor_stand = builder.build_static(name='monitor')
+    monitor_stand.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.44275546192896376,
+            1.3677609300247515,
+            -0.6202413967664994
+        ]),
+        q=np.array([
+            -4.371138828673793e-08,
+            -1.7763568394002505e-15,
+            1.0,
+            -8.940696716308594e-08
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_box.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_box_cv_decomp.glb")
+    box = builder.build(name='box')
+    box.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            4.180875379491428,
+            1.7446024328401433,
+            3.9581493301553787
+        ]),
+        q=np.array([
+            0.7071492075920105,
+            -0.009717144072055817,
+            0.7069830298423767,
+            -0.004533467348664999
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_box.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_box_cv_decomp.glb")
+    box = builder.build(name='box')
+    box.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            0.5360783920138471,
+            0.8969253691870651,
+            5.64833215915369
+        ]),
+        q=np.array([
+            0.9999961256980896,
+            0.001716894330456853,
+            3.311691034468822e-05,
+            -0.002190836938098073
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_book_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_book_01.glb")
+    book_01 = builder.build(name='book')
+    book_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            4.19816869132963,
+            1.4229390890756874,
+            3.8625429417406565
+        ]),
+        q=np.array([
+            0.0001892606378532946,
+            -0.00021255071624182165,
+            0.8249385952949524,
+            0.5652222633361816
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_book_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_book_01.glb")
+    book_01 = builder.build(name='book')
+    book_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            4.197600338038609,
+            1.4214713667526906,
+            4.014418425396742
+        ]),
+        q=np.array([
+            0.00022776523837819695,
+            -0.0003542584308888763,
+            0.717333197593689,
+            0.6967301964759827
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_book_01.glb")
+    builder.add_collision_from_file(
+        filename="replica_cad/objects/frl_apartment_book_01.glb")
+    book_01 = builder.build(name='book')
+    book_01.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            4.197846850437962,
+            1.3944192199414716,
+            4.014852383860682
+        ]),
+        q=np.array([
+            -0.0002748211263678968,
+            0.00022432950208894908,
+            0.7173177003860474,
+            0.6967461705207825
+        ])
+    )))
+
+    builder = scene.create_actor_builder()
+    builder.add_visual_from_file(
+        filename="replica_cad/objects/frl_apartment_tvstand.glb")
+    builder.add_nonconvex_collision_from_file(
+        filename="replica_cad/objects/convex/frl_apartment_tvstand_cv_decomp.glb")
+    tvstand = builder.build_static(name='tv_stand')
+    tvstand.set_pose(r2s(sapien.Pose(
+        p=np.array([
+            3.151346543163527,
+            0.37619612738490105,
+            7.716032639145851
+        ]),
+        q=np.array([
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ])
+    )))
 
     # Viewer
     viewer = Viewer(renderer, resolutions=(1920, 1080))

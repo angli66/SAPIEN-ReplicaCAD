@@ -333,25 +333,25 @@ def main():
         ])
     )))
 
-    builder = scene.create_actor_builder()
-    builder.add_visual_from_file(
-        filename="replica_cad/objects/frl_apartment_indoor_plant_02.glb")
-    builder.add_collision_from_file(
-        filename="replica_cad/objects/convex/frl_apartment_indoor_plant_02_cv_decomp.glb")
-    indoor_plant_02 = builder.build(name='indoor_plant')
-    indoor_plant_02.set_pose(r2s(sapien.Pose(
-        p=np.array([
-            4.088084328551301,
-            0.989412917817415,
-            7.591271953147692
-        ]),
-        q=np.array([
-            5.669991151080467e-05,
-            9.794412108021788e-07,
-            1.0,
-            -3.5480688893585466e-06
-        ])
-    )))
+    # builder = scene.create_actor_builder()
+    # builder.add_visual_from_file(
+    #     filename="replica_cad/objects/frl_apartment_indoor_plant_02.glb")
+    # builder.add_collision_from_file(
+    #     filename="replica_cad/objects/convex/frl_apartment_indoor_plant_02_cv_decomp.glb")
+    # indoor_plant_02 = builder.build(name='indoor_plant')
+    # indoor_plant_02.set_pose(r2s(sapien.Pose(
+    #     p=np.array([
+    #         4.088084328551301,
+    #         0.989412917817415,
+    #         7.591271953147692
+    #     ]),
+    #     q=np.array([
+    #         5.669991151080467e-05,
+    #         9.794412108021788e-07,
+    #         1.0,
+    #         -3.5480688893585466e-06
+    #     ])
+    # )))
 
     builder = scene.create_actor_builder()
     builder.add_visual_from_file(
@@ -1242,19 +1242,21 @@ def main():
     builder.add_collision_from_file(
         filename="replica_cad/objects/convex/frl_apartment_camera_02_cv_decomp.glb")
     camera_02 = builder.build(name='camera')
-    camera_02.set_pose(r2s(sapien.Pose(
-        p=np.array([
-            0.4675843503131788,
-            1.764217499666931,
-            -0.5872958740340483
-        ]),
-        q=np.array([
-            0.7091919779777527,
-            -0.028345324099063873,
-            -0.7040526270866394,
-            0.023521307855844498
-        ])
-    )))
+    # camera_02.set_pose(r2s(sapien.Pose(
+    #     p=np.array([
+    #         0.4675843503131788,
+    #         1.764217499666931,
+    #         -0.5872958740340483
+    #     ]),
+    #     q=np.array([
+    #         0.7091919779777527,
+    #         -0.028345324099063873,
+    #         -0.7040526270866394,
+    #         0.023521307855844498
+    #     ])
+    # )))
+    camera_02.set_pose(sapien.Pose(
+        [0.583088, -0.467597, 1.79718], [-0.0786479, 6.26256e-05, -0.708008, -0.701811]))
 
     builder = scene.create_actor_builder()
     builder.add_visual_from_file(
@@ -1439,22 +1441,24 @@ def main():
     builder = scene.create_actor_builder()
     builder.add_visual_from_file(
         filename="replica_cad/objects/frl_apartment_kitchen_utensil_04.glb")
-    builder.add_collision_from_file(
+    builder.add_nonconvex_collision_from_file(
         filename="replica_cad/objects/convex/frl_apartment_kitchen_utensil_04_cv_decomp.glb")
-    kitchen_utensil_04 = builder.build(name='kitchen_utensil')
-    kitchen_utensil_04.set_pose(r2s(sapien.Pose(
-        p=np.array([
-            -2.393288374197755,
-            0.9958334886794491,
-            0.739746062509862
-        ]),
-        q=np.array([
-            0.7067710161209106,
-            0.00018358776287641376,
-            -0.7074423432350159,
-            0.0001732671371428296
-        ])
-    )))
+    kitchen_utensil_04 = builder.build_static(name='kitchen_utensil')
+    # kitchen_utensil_04.set_pose(r2s(sapien.Pose(
+    #     p=np.array([
+    #         -2.393288374197755,
+    #         0.9958334886794491,
+    #         0.739746062509862
+    #     ]),
+    #     q=np.array([
+    #         0.7067710161209106,
+    #         0.00018358776287641376,
+    #         -0.7074423432350159,
+    #         0.0001732671371428296
+    #     ])
+    # )))
+    kitchen_utensil_04.set_pose(sapien.Pose(
+        [-0.739697, 2.3934, 0.916119], [-0.000382662, -0.000314354, -0.707182, -0.707032]))
 
     builder = scene.create_actor_builder()
     builder.add_visual_from_file(
@@ -1465,7 +1469,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.444240719419895,
-            1.07352401047594,
+            1.0,
             0.8247272897509641
         ]),
         q=np.array([
@@ -1485,7 +1489,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.444071442228733,
-            1.0735310359159485,
+            1.0,
             0.7699508810956104
         ]),
         q=np.array([
@@ -1505,7 +1509,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.444080978971897,
-            1.0735252001548916,
+            1.0,
             0.7153729571573297
         ]),
         q=np.array([
@@ -1525,7 +1529,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.439621359449802,
-            1.0735386684249488,
+            1.0,
             0.6612882268538393
         ]),
         q=np.array([
@@ -1545,7 +1549,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.3755842748703344,
-            1.0455457070137173,
+            0.97,
             0.8185636176340143
         ]),
         q=np.array([
@@ -1565,7 +1569,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.3752742529920505,
-            1.0455411689549614,
+            0.97,
             0.7614319548317205
         ]),
         q=np.array([
@@ -1585,7 +1589,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.3752459747597836,
-            1.0455294887106037,
+            0.97,
             0.7068356780545527
         ]),
         q=np.array([
@@ -1605,7 +1609,7 @@ def main():
     kitchen_utensil_03.set_pose(r2s(sapien.Pose(
         p=np.array([
             -2.3753357865870286,
-            1.0455514221442006,
+            0.97,
             0.6512400181799256
         ]),
         q=np.array([
@@ -2316,9 +2320,9 @@ def main():
     loader = scene.create_urdf_loader()
     loader.fix_root_link = True
     loader.scale = 0.38
-    kitchen_cupboards = loader.load(
+    kitchen_cupboard = loader.load(
         "replica_cad/urdf/kitchen_cupboards/kitchenCupboard_01.urdf")
-    kitchen_cupboards.set_root_pose(r2s(sapien.Pose(
+    kitchen_cupboard.set_root_pose(r2s(sapien.Pose(
         p=np.array([
             -2.3,
             1.54,
@@ -2335,9 +2339,9 @@ def main():
     loader = scene.create_urdf_loader()
     loader.fix_root_link = True
     loader.scale = 0.4
-    chest_of_drawers = loader.load(
+    chest_of_drawer = loader.load(
         "replica_cad/urdf/chest_of_drawers/chestOfDrawers_01_dynamic.urdf")
-    chest_of_drawers.set_root_pose(r2s(sapien.Pose(
+    chest_of_drawer.set_root_pose(r2s(sapien.Pose(
         p=np.array([
             -2.318626880645752,
             0,
@@ -2364,6 +2368,23 @@ def main():
             0.315322,
             0,
             0.948985,
+            0
+        ])
+    )))
+
+    loader = scene.create_urdf_loader()
+    loader.fix_root_link = True
+    door = loader.load("replica_cad/urdf/doors/door2.urdf")
+    door.set_root_pose(r2s(sapien.Pose(
+        p=np.array([
+            -0.35,
+            2.4,
+            -2.65
+        ]),
+        q=np.array([
+            1,
+            0,
+            0,
             0
         ])
     )))

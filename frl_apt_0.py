@@ -46,9 +46,6 @@ def main():
 
     # Lighting
     scene.set_ambient_light([0.5, 0.5, 0.5])
-    scene.add_point_light([1, 2, 2], [1, 1, 1], shadow=True)
-    scene.add_point_light([1, -2, 2], [1, 1, 1], shadow=True)
-    scene.add_point_light([-1, 0, 1], [1, 1, 1], shadow=True)
 
     # Objects
     builder = scene.create_actor_builder()

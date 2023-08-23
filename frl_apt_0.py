@@ -18,19 +18,7 @@ def r2s(pose: sapien.Pose) -> sapien.Pose:
     return relative_pose * pose
 
 
-def main():
-    # Set up engine and renderer
-    engine = sapien.Engine()
-    renderer = sapien.SapienRenderer()
-    engine.set_renderer(renderer)
-
-    # Enable ray tracing
-    # sapien.render_config.camera_shader_dir = 'rt'
-    # sapien.render_config.viewer_shader_dir = 'rt'
-    # sapien.render_config.rt_samples_per_pixel = 8
-    # sapien.render_config.rt_max_path_depth = 8
-    # sapien.render_config.rt_use_denoiser = True
-
+def build_scene(engine: sapien.Engine):
     # Set up scene
     scene = engine.create_scene()
     scene.set_timestep(1 / 100.0)
@@ -1657,25 +1645,25 @@ def main():
         ])
     )))
 
-    builder = scene.create_actor_builder()
-    builder.add_visual_from_file(
-        filename="replica_cad/objects/frl_apartment_picture_03.glb")
-    builder.add_collision_from_file(
-        filename="replica_cad/objects/frl_apartment_picture_03.glb")
-    picture_03 = builder.build(name='picture')
-    picture_03.set_pose(r2s(sapien.Pose(
-        p=np.array([
-            -2.2339015470141543,
-            1.0536260587741557,
-            0.3960886158897984
-        ]),
-        q=np.array([
-            -0.09706857055425644,
-            -0.01689460314810276,
-            0.9803974032402039,
-            -0.1706264317035675
-        ])
-    )))
+    # builder = scene.create_actor_builder()
+    # builder.add_visual_from_file(
+    #     filename="replica_cad/objects/frl_apartment_picture_03.glb")
+    # builder.add_collision_from_file(
+    #     filename="replica_cad/objects/frl_apartment_picture_03.glb")
+    # picture_03 = builder.build(name='picture')
+    # picture_03.set_pose(r2s(sapien.Pose(
+    #     p=np.array([
+    #         -2.2339015470141543,
+    #         1.0536260587741557,
+    #         0.3960886158897984
+    #     ]),
+    #     q=np.array([
+    #         -0.09706857055425644,
+    #         -0.01689460314810276,
+    #         0.9803974032402039,
+    #         -0.1706264317035675
+    #     ])
+    # )))
 
     builder = scene.create_actor_builder()
     builder.add_visual_from_file(
@@ -2386,6 +2374,24 @@ def main():
         ])
     )))
 
+    return scene
+
+
+if __name__ == '__main__':
+    # Set up engine and renderer
+    engine = sapien.Engine()
+    renderer = sapien.SapienRenderer()
+    engine.set_renderer(renderer)
+
+    # Enable ray tracing
+    # sapien.render_config.camera_shader_dir = 'rt'
+    # sapien.render_config.viewer_shader_dir = 'rt'
+    # sapien.render_config.rt_samples_per_pixel = 8
+    # sapien.render_config.rt_max_path_depth = 8
+    # sapien.render_config.rt_use_denoiser = True
+
+    scene = build_scene(engine)
+
     # Viewer
     viewer = Viewer(renderer, resolutions=(1920, 1080))
     viewer.set_scene(scene)
@@ -2395,6 +2401,3 @@ def main():
         scene.step()
         scene.update_render()
         viewer.render()
-
-
-main()
